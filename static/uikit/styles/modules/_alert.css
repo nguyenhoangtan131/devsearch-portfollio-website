@@ -1,0 +1,54 @@
+.custom-alert {
+  display: inline-flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-white-light);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.custom-alert,
+.custom-alert > .alert__message {
+  background-color: var(--color-main-light);
+  color: var(--color-main);
+  font-size: 1.4rem;
+  font-weight: var(--font-medium);
+}
+
+.custom-alert.alert--error,
+.custom-alert.alert--error > .alert__message {
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.custom-alert.alert--success,
+.custom-alert.alert--success > .alert__message {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.custom-alert > .custom-alert__close {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: transparent;
+  font-size: 2rem;
+  transition: var(--generic-transition);
+}
+
+.custom-alert > .custom-alert__close:hover {
+  opacity: 0.85;
+}
+
+.custom-alert {
+  position: relative; /* nếu chưa có */
+  z-index: 1000;
+}
+
+.custom-alert__close {
+  position: relative; /* nếu cần */
+  z-index: 1001;
+}
